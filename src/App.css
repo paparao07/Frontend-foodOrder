@@ -1,0 +1,289 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #292929;
+}
+
+.header {
+  background: #e85d04;
+  color: white;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0 0 10px;
+}
+
+.header p {
+  margin-bottom: 18px;
+}
+
+.cart-link {
+  display: inline-block;
+  color: #e85d04;
+  background: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px 20px;
+}
+
+.container > h2,
+.cart-section > h2 {
+  text-align: center;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.category-btn {
+  padding: 10px 16px;
+  border: 1px solid #e85d04;
+  border-radius: 25px;
+  background: white;
+  color: #e85d04;
+  cursor: pointer;
+}
+
+.category-btn.active,
+.category-btn:hover {
+  background: #e85d04;
+  color: white;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.food-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px #00000012;
+  transition: transform 0.2s;
+}
+
+.food-card:hover {
+  transform: translateY(-4px);
+}
+
+.food-image {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  display: block;
+}
+
+.food-info {
+  padding: 17px;
+}
+
+.food-category {
+  font-size: 12px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.food-info h3 {
+  min-height: 24px;
+  margin: 10px 0;
+}
+
+.price {
+  color: #e85d04;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.add-btn,
+.clear-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  background: #e85d04;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.add-btn:hover,
+.clear-btn:hover {
+  background: #c94c00;
+}
+
+.cart-section {
+  margin-top: 45px;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #00000010;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-details {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.cart-details span {
+  color: #666;
+  font-size: 14px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quantity-controls button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background: #ffe6d5;
+  color: #c94c00;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.cart-total {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.cart-total h3 {
+  color: #e85d04;
+}
+
+.clear-btn {
+  max-width: 150px;
+}
+
+.error {
+  color: #c62828;
+  text-align: center;
+}
+
+.footer {
+  margin-top: 35px;
+  padding: 20px;
+  text-align: center;
+  background: #292929;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px 10px;
+  }
+
+  .cart-section {
+    padding: 15px;
+  }
+
+  .cart-item {
+    flex-wrap: wrap;
+  }
+}
+
+.checkout-section {
+  max-width: 650px;
+  margin: 35px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #00000012;
+}
+
+.checkout-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.checkout-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkout-section label {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.checkout-section input,
+.checkout-section textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font: inherit;
+}
+
+.checkout-section input:focus,
+.checkout-section textarea:focus {
+  outline: 2px solid #e85d04;
+  border-color: #e85d04;
+}
+
+.place-order-btn {
+  padding: 14px;
+  border: none;
+  border-radius: 7px;
+  background: #e85d04;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.place-order-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.order-message {
+  margin-top: 20px;
+  padding: 12px;
+  background: #fff0e5;
+  border-radius: 7px;
+  overflow-wrap: anywhere;
+}
+
